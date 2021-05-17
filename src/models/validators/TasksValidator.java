@@ -7,7 +7,7 @@ import models.Tasks;
 
 
 
-public class MessageValidator {
+public class TasksValidator {
     // バリデーションを実行する
     public static List<String> validate(Tasks t) {
         List<String> errors = new ArrayList<String>();
