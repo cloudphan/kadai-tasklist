@@ -56,9 +56,9 @@ public class IndexServlet extends HttpServlet {
         request.setAttribute("tasks", tasks);
         request.setAttribute("tasks_count", tasks_count);     // 全件数
         request.setAttribute("page", page);
-        // フラッシュメッセージがセッションスコープにセットされていたら
+        // フラッシュがセッションスコープにセットされていたら
         if(request.getSession().getAttribute("flush") != null) {
-            // セッションスコープ内のフラッシュメッセージをリクエストスコープに保存し、セッションスコープからは削除する
+            //リクエストスコープに保存し、セッションスコープからは削除する
             request.setAttribute("flush", request.getSession().getAttribute("flush"));
             request.getSession().removeAttribute("flush");
         }
